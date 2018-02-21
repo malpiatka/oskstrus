@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+/*** Header Styles ***/
+header {
+	width: 100%;
+	height: 50vh;
+	background: url(img/banner.jpg);
+	background-size: cover;
+	display: flex;
+}
+#logo {
+	width: 80px;
+	height: 65px;
+	cursor: pointer;
+	background: url(img/oksstrus.png);
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+	margin: 10px;
+}
+/*** Navigation Styles ***/
+nav {
+	width: 100vw;
+	height:  auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	position: fixed;
+	z-index: 10;
+}
+nav.navShadow {
+	box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+	height: 100px;
+}
+nav.navShadow #word-mark {
+	opacity: 0;
+}
+#menu, .navigation {
+	display: flex;
+	align-items: center;
+}
+
+/*** Menu Styles ***/
+#menu {
+	justify-content: flex-end;
+	padding: 10px;
+}
+#menu-toggle {
+	width: 55px;
+	height: 55px;
+	background: rgb(51, 87, 206);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+}
+#menu-toggle:hover .bar {
+	width: 25px;
+}
+#menu-toggle.closeMenu .bar {
+	width: 25px;
+}
+#menu-toggle.closeMenu .bar:first-child {
+	transform: translateY(7px) rotate(45deg);
+}
+#menu-toggle.closeMenu .bar:nth-child(2) {
+	transform: scale(0);
+}
+#menu-toggle.closeMenu .bar:last-child {
+	transform: translateY(-7px) rotate(-45deg);
+}
+.bar {
+	width: 25px;
+	height: 2px;
+	background: rgb(226, 255, 0);
+	transition: 0.3s ease-in-out;
+}
+.bar:nth-child(2) {
+	width: 20px;
+	margin: 5px 0;
+}
+.bar:last-child {
+	width: 15px;
+}
+.navigation {
+	display: inline-block;
+	width: 100vw;
+	height: 0;
+	background: rgb(121, 237, 252);
+	position: absolute;
+	top: 160px;
+	transform: translate();
+	box-shadow: 0 5px 30px -4px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s;
+}
+.navigation li {
+	width: 50%;
+	height: 80px;
+	float: left;
+	padding-left: 40px;
+	opacity: 0;
+	visibility: hidden;
+	margin-left: 0;
+	transition: all 0.3s 0.1s;
+}
+.navigation li a {
+	width: 80px;
+	height: 20px;
+	display: block;
+	border-radius: 90px;
+}
+section{
+	margin-top: 10vh;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+#about{
+	padding: 5px;
+}
+.about-card{
+	background-color: rgb(172, 255, 249);
+	margin: 5px;
+	justify-items: center;
+	text-align: center;
+}
+.icon{
+	font-size: 1.8em;
+	margin: 8px;
+}
+#kurs{
+	padding: 5px;
+	background-color: rgb(255, 248, 220);
+}
+#kurs img{
+	height: auto;
+	width: 50vw;
+}
+#info img{
+	height: auto;
+	width: 40vw;
+}
+iframe{
+	width: 95vw;
+	height: 70vh;
+}
+footer img{
+	height: 45px;
+	width: auto;
+}
+
+@media(min-width:560px){
+	#about{
+		grid-template-columns: 1fr 1fr;
+	}
+	#kontakt{
+		grid-template-columns: 1fr 1fr;	
+	}
+	iframe{
+		width: 55vW;
+	}
+}
