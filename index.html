@@ -11,60 +11,57 @@
 </head>
 <body>
 <header>
-	<div id="logo"></div>
 	<nav>
-		<div id="menu">
-			<div id="menu-toggle">
-				<div id="menu-icon">
-					<div class="bar"></div>
-					<div class="bar"></div>
-					<div class="bar"></div>
-				</div>
+		<div class="nav-container">
+		<div class="logo">
+			<img src="img/oksstrus.png" alt="">
 			</div>
-			<ul class="navigation">
-				<li><a href="#banner">Start</a></li>
-				<li><a href="#about">O mnie</a></li>
-				<li><a href="#kurs">O kursie</a></li>
-				<li><a href="#info">Informacje</a></li>
-				<li><a href="#kontakt">Kontakt</a></li>
-			</ul>
+			<div class="btn">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
 		</div>
+		<ul>
+			<li><a href="#banner">Start</a></li>
+			<li><a href="#about">O mnie</a></li>
+			<li><a href="#kurs">O kursie</a></li>
+			<li><a href="#info">Informacje</a></li>
+			<li><a href="#kontakt">Kontakt</a></li>
+		</ul>
 	</nav>
-	<!-- myslalam zeby zrobic jakies przecienie geometryczne tego zdjecia zeby taki kopnietym prostokatem bylo i fote podrasowac w kwestii swiatla nasycienia kolorow i na tym nazwa szkoly i jakies krotkie haslo pod nim-->
 	<div id="banner">
+	<div class="banner-text">
 		<h2>Struś</h2>
-		<p>lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi facilis, ad magni aliquam quae accusamus!</p>
+		<p>lorem Lorem ipsum dolor sit amet, consectetur elit. Quasi facilis, ad magni accusamus!</p>
+	</div>
 	</div>
 </header>
-
-	<!-- pod calosc strony myslalam zeby wrzucic jakies gradientowe jasne tlo zeby sie cos odznaczalo z jakiejs otwartej licencji np cos z tego wybrac
-	https://www.vecteezy.com/free-vector/free-vector-pattern-background
-	https://www.freepik.com/free-photos-vectors/pattern-background -->
 <main>
 	<section id="about">
 	
-	<!-- tu ikony i podpisy beda od poczatku na blokach a paragrafy beda wjezdzac po najechaniu na nie tak sobie to wymyslilam, kolor random tylko po to zebym widziala jak sie pola zachowuja-->
-		<div class="about-card">
+	<!-- zrobic wjezdzajace paragrafy zastepujace ikony-->
+		<div class="about-card ac1">
 			<i class="icon far fa-file-alt"></i>
 		<h3>lorem</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus commodi, omnis earum consectetur officiis similique culpa quisquam tenetur, rerum eaque, provident repellat minima aliquam architecto, porro qu</p>
 		</div>
-		<div class="about-card">
+		<div class="about-card ac2">
 			<i class="icon fas fa-road"></i>
 			<h3>lorem</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus commodi, omnis earum consectetur officiis similique culpa quisquam tenetur, rerum eaque, provident repellat minima aliquam architecto, porro qu</p>
 		</div>
-		<div class="about-card">
+		<div class="about-card ac3">
 			<i class="icon far fa-map"></i>
 			<h3>lorem</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus commodi, omnis earum consectetur officiis similique culpa quisquam tenetur, rerum eaque, provident repellat minima aliquam architecto, porro qu</p>
 		</div>
-		<div class="about-card">
+		<div class="about-card ac4">
 			<i class="icon far fa-id-card"></i>
 			<h3>lorem</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus commodi, omnis earum consectetur officiis similique culpa quisquam tenetur, rerum eaque, provident repellat minima aliquam architecto, porro qu</p>
 		</div>
-	<!-- jakies zdjecie od zdziska jeszcze by sie tu zdalo, poprosze go o zdjecie tego jego niebieskiego strusia maskoty za kierownica-->
+	<!-- zdjecie strusia maskoty za kierownica-->
 	</section>
 	<section id="kurs">
 		<h2>O kursie</h2>
@@ -83,8 +80,7 @@
 	<section id="info">
 		<h2>Informacje</h2>
 		<div class="listek">
-		<img src="img/vecteezy/FreeVector-Green-Leaf-Vector-Background.jpg" alt="">
-			<a href="https://www.vecteezy.com">Free vector art via www.Vecteezy.com</a>
+			<img src="img/remi-walle-85557-unsplash.jpg" alt="">
 			<h3>zielony listek</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita voluptatum vitae quas iure facere explicabo, qui in, ipsa a, dolorum quisquam co Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat tempora dolor distinctio omnis, dignissimos et dolorem obcaecati ducimus aliquid ex nam veritatis facilis nobis recusandae accusantium similique cum possimus libero minus numquam enim veniam architecto! Amet consequatur, modi id, tenetur sit facere velit incidunt dolorem, esse, dolore eum! Sed deleniti voluptas unde nisi minima eum nemo quos praesentium incidunt et neque sunt veniam repudiandae similique debitis iusto, minus, odit est.mmodi ullam sit. Quam, vitae non excepturi ex doloremque velit cupiditate iure tenetur eaque fugit recusandae. Deserunt corporis rem ea animi laudantium, nihil dignissimos dolor eius assumenda beatae a non, 
 			</p>
@@ -115,5 +111,7 @@
 </div>
 </footer>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
