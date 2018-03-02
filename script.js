@@ -1,15 +1,16 @@
-$(document).ready(function(){
-	$(".btn").click(function(){
-		$("nav ul").slideToggle(700);
-	})
+$(document).ready(function () {
+    $(".btn").click(function () {
+        $(this).toggleClass('open');
+        $("nav ul").slideToggle(500);
+    })
 });
 
-$(document).ready(function() {
-	$('a[href^="#"]').click(function() {
-		var hash = $(this).attr('href');
-		$('html, body').animate({
-			scrollTop: $(hash).offset().top
-		}, 1500);
-		return false;
-	});
+$(document).ready(function () {
+    $('a[href^="#"]').click(function () {
+        var hash = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 1500);
+        return false;
+    });
 });
