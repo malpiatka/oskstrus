@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 14px;
+	font-family: 'Merriweather', serif;
 }
 
 ::-webkit-scrollbar {
@@ -34,7 +35,7 @@ nav ul {
 
 nav ul a {
     display: block;
-    background-color: rgba(31, 31, 42, 0.79);
+    background-color: rgba(5, 5, 16, 0.9);
     padding: 20px;
     font-size: 1.5em;
     text-decoration: none;
@@ -45,7 +46,7 @@ nav ul a {
 
 nav ul a:hover {
     background-color: rgba(203, 203, 203, 0.85);
-	 color:  rgb(14, 14, 34);
+	color:  rgb(0, 0, 29);
     padding: 20px;
 	font-weight: 600;
 }
@@ -57,7 +58,7 @@ nav ul a:hover {
 
 .nav-container {
     padding: 0 20px;
-	background-color:  rgba(14, 14, 34, 0.85);
+	background-color:  rgba(0, 0, 29, 0.85);
     display: flex;
     justify-content: space-between;
 }
@@ -131,30 +132,64 @@ nav ul a:hover {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+.banner-logo img{
+	width: 25vw;
+	height: auto;
+	visibility: hidden;
+}
+.banner-logo{
+	position: absolute;
+	top:8vh;
+	right: 2vw;
 }
 
 .banner-text {
-    background-color: rgba(255, 255, 255, 0.83);
+	background-color: rgba(9, 9, 23, 0.9);
+	color: rgb(255, 255, 255);
     position: absolute;
-    width: 50vw;
+    width: 70vw;
     padding: 10px;
+	box-shadow: 1px 2px 3px rgba(9, 9, 23, 0.8),
+		2px 4px 6px rgba(9, 9, 23, 0.5);
+	bottom: 20vh;
 
+}
+
+.banner-text h1 {
+    font-weight: 600;
+    font-size:2em;
+    text-align: center;
+	margin:2%;
+	color:rgb(255, 215, 10)
 }
 
 .banner-text h2 {
-    font-weight: 600;
-    font-size: 1.8em;
-    text-align: center;
-}
-
-.banner-text p {
     padding: 2%;
-    font-size: 0.95em;
+    font-size: 1.1em;
     text-align: center;
+	line-height:1.5em;
 }
 
 /*** Sections Styles ***/
+.fb-btn{
+	display: flex;
+	position: fixed;
+	right: 0;
+	bottom: 10vh;
+	z-index: 9;
+	border-radius: 15%;
+	background-color: rgb(57, 72, 247);
+	border-color: rgb(57, 72, 247);
+	box-shadow: 1px 2px 3px rgba(31, 31, 42, 0.8),
+		2px 4px 6px rgba(31, 31, 42, 0.5);
+	
+}
+.fb-btn a{
+	color: white;
+	font-size: 2em;
+	padding:5px 5px 0 20px;
+}
 section {
     display: grid;
     grid-template-columns: 1fr;
@@ -162,26 +197,27 @@ section {
 	background-color: white;
 }
 
-#about {
-    
-}
-#about h1{
+#about h1, #kurs h1, #info h1, #kontakt h1{
 	text-align: center;
-	font-size: 2em;
+	font-size: 2.2em;
+	font-weight: 600;
 	margin: 15vh 0 5vh;	
 	text-transform: uppercase;
+	color: rgba(2, 2, 16)	;
+	text-shadow: 1px 1px 1px rgba(0, 0, 29, 0.6),
+		2px 3px 4px rgba(0, 0, 29, 0.4);
 }
 .about-cards {
 	padding: 5px;	
     margin: 5px;
 	justify-self:center;	
     text-align: center;
-
 }
 .about-card{
 	overflow: hidden;
 	height: 35vh;
 	width: 100vw;
+	margin: 5% 0;
 }
 
 .ac1 {
@@ -218,7 +254,7 @@ section {
 }
 .front-text {
 
-	background-color:  rgba(9, 9, 23, 0.60);
+	background-color:  rgba(9, 9, 23, 0.7);
     color: rgb(255, 255, 255);
 	align-self:center;
     text-align: center;
@@ -229,8 +265,9 @@ section {
 .front-text h3{
 	font-size: 1.5em;
 }
+
 .back-text {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
 	align-self:center;
 	text-align: center;
 	position: absolute;
@@ -240,21 +277,22 @@ section {
 	transition: 1.5s ease;
 }
 .back-text h3{
-	font-size: 2em;
-	margin: 3%;
+	font-size: 1.5em;
+	margin: 5%;
+}
+.back-text p{
+	font-size: 1em;
 }
 .ac-text:hover{
 	transform: translateY(-100%);
 	transition: 1.5s ease;
 }
 
-#kurs {
-    padding: 5px;
-}
-
 .kurs-text{
 	text-align: justify;
-	padding: 5px;
+}
+.kurs-text p{
+	padding: 0 15px
 }
 
 #kurs img {
@@ -262,58 +300,99 @@ section {
     width: 50vw;
 }
 
-#kurs h1{
-	text-align: center;
-	font-size: 2em;
-	margin: 15vh 0 5vh;	
-	text-transform: uppercase;
-}
-#kurs h3{
+#kurs h2{
 	font-size: 1.5em;
+	font-weight: 600;	
 	text-transform: uppercase;
-	margin: 5px 0;
-	text-align: left;
+	color: rgba(2, 2, 16);
+	background-color: rgba(0, 0, 29, 0.9);
+	color: rgb(255, 255, 255);
+	padding: 5px 15px;
+	margin: 15px 5px 10px;
+	-webkit-transform: skew(-15deg);
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
 }
-.kurs-text ul{
-	padding: 0 5%;
+.list-area p{
+	padding: 0 15px;
+}
+.list-kurs{
+	padding: 5px 0 0 35px;
+}
+.list-kurs li{
+	padding: 10px 0;
+}
+#kurs img{
+	margin: 10px;
 }
 #info  {
 	display: grid;
+	text-align: justify;
+	
 }
-#info h1{
-	text-align: center;
-	font-size: 2em;
-	margin: 15vh 0 5vh;	
+.info-area img{
+	padding: 10px;
+	float:left;
+	border-radius: 50%;
+	max-width: 40vw;
+	max-height: auto;
+}
+#info h2{
+	font-size: 1.5em;
+	font-weight: 600;	
 	text-transform: uppercase;
+	background-color: rgba(0, 0, 29, 0.9);
+	color: rgb(255, 255, 255);
+	padding: 10px;
+	margin: 15px 5px 10px;
+	-webkit-transform: skew(-15deg);
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
 }
-#info img {
-    height: auto;
-    width: 40vw;
+.info-area p{
+	padding: 0 15px;
 }
 
+#kontakt{
+	padding: 10px;
+}
+
+.kontakt-area{
+	display: grid;
+}
 iframe {
-    width: 95vw;
+    width: 90vw;
     height: 70vh;
 }
+adress{
+	display: grid;
+	justify-self:center;
+	align-self:center;
+	padding: 10% 0;
+}
 adress h2{
-	text-align: center;
+	
 	font-size: 1.5em;
-	justify-self:center;	
+	font-weight: 600;	
 	text-transform: uppercase;
-	margin: 5px;
+	color: rgba(0, 0, 29);
+	text-shadow: 1px 1px 1px rgba(0, 0, 29, 0.2),
+		2px 3px 4px rgba(0, 0, 29, 0.1);
 }
 adress p, span{
-	margin: 0 25%;
-	font-size: 1.4em;
+	font-size: 1.1em;
+	line-height:1.5em;
 }
 footer p{
 	width: 100%;
-	background-color: rgb(14, 14, 34);
+	background-color: rgb(0, 0, 29);
 text-align: center;
 	padding: 5px;
 	color: white;
 	font-size: 0.8em;
 }
+
+/*** RWD ***/
 
 @media screen and (min-width: 560px) {
     .nav-container {
@@ -323,13 +402,13 @@ text-align: center;
     nav ul {
         display: flex !important;
         flex-wrap: wrap;
-		 background-color: rgba(14, 14, 34, 0.85);
+		 background-color: rgba(0, 0, 29, 0.85);
         justify-content: space-around;
     }
 
     nav ul a {
         background: transparent;
-        padding: 5px;
+        padding: 7px;
 		 font-weight: 600;
 		 color: white;
     }
@@ -339,35 +418,125 @@ text-align: center;
         padding: 5px;
 		 color: rgb(255, 216, 0);
     }
+	.banner-logo img{
+		visibility: visible;
+	}
+	.banner-text {
+		width: 40vw;
+		bottom: 15vh;
+	}
 
+	.banner-text h1 {
+		font-size:3em;
+	}
+
+	.banner-text h2 {
+		font-size: 1.5em;
+		line-height:1.8em;
+	}
+	
+	.fb-btn a{
+		font-size: 2.5em;
+	}
+
+	#about h1, #kurs h1, #info h1, #kontakt h1{
+		font-size: 2.4em;
+	}
+	
     #about-cards {
 		 display: grid;
         grid-template-columns: 1fr 1fr;
 		 grid-gap: 0.5em;
-		 margin: 5px;
+		 margin: 0;
     }
 	.about-card{
 		height: 45vh;
 		width: 100%;
+		margin: 0;
 	}
+	.icon {
+		font-size: 6em;
+		margin: 5%;
+		color: rgb(255, 214, 10);
+	}
+
 	.front-text{
 		padding: 10%;
 		align-self:center;
-		
+	}
+	.front-text h3{
+		font-size: 2em;
 	}
 	.back-text{
-		padding: 15%;
+		padding: 10% 15%;
 		align-self:center;
 	}
-
-    #kontakt {
+	.back-text h3{
+		font-size: 2.4em;
+		margin: 5%;
+	}
+	.back-text p{
+		font-size: 1.3em;
+	}
+	#kurs{
+		padding: 0;
+	}
+	.list-area{
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	}
+	
+	#kurs p, #kurs h4{
+		font-size: 1.1em;
+	}
+	#kurs h4{
+		font-size: 1.2em;
+		padding: 0;
+	}
+	#kurs img{
+		padding: 0;
+		max-width: 40vw;
+		max-height: auto;
+		margin:15px 0 0;
+	}
+	.info-area img{
+		padding: 3%;
+		float:left;
+		border-radius: 50%;
+		max-width: 30vw;
+		max-height: auto;
+	}
+	#info,#info h1{
+		padding: 0;
+	}
+	#info p{
+		font-size: 1.1em;
+	}
+	.info-link{
+		margin-top: 5vh;
+		font-weight: 600;
+	}
+	.info-link a{
+		padding: 0 20px;
+		font-size: 1.2em;
+	}
+	.kontakt-area {
+		display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
     iframe {
-        width: 55vW;
+        width: 50vW;
+		 padding: 5%;
     }
-	adress{
-		align-self:center;
+	adress h2{
+		font-size: 1.7em;
+	}
+	adress p, span{
+		font-size: 1.3em;
+		line-height:2em;
+	}
+	adress a{
+		font-size: 1.1em;
 	}
 }
