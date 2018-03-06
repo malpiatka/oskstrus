@@ -27,17 +27,21 @@ nav {
     height: 65px;
     width: 70px;
 }
+.nav-logo img {
+	display:none;
+}
 
 nav ul {
     list-style-type: none;
     display: none;
+	align-items: center;
 }
 
 nav ul a {
     display: block;
     background-color: rgba(5, 5, 16, 0.9);
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-decoration: none;
     text-transform: uppercase;
     color: rgb(255, 216, 0);
@@ -133,27 +137,16 @@ nav ul a:hover {
     justify-content: center;
 }
 
-.banner-logo img {
-    width: 25vw;
-    height: auto;
-    visibility: hidden;
-}
-
-.banner-logo {
-    position: absolute;
-    top: 8vh;
-    right: 2vw;
-}
 
 .banner-text {
     background-color: rgba(9, 9, 23, 0.9);
     color: rgb(255, 255, 255);
     position: absolute;
-    width: 70vw;
+    width: 75vw;
     padding: 10px;
     box-shadow: 1px 2px 3px rgba(9, 9, 23, 0.8),
     2px 4px 6px rgba(9, 9, 23, 0.5);
-    bottom: 20vh;
+    bottom: 10vh;
 
 }
 
@@ -184,7 +177,7 @@ section {
 
 #about h1, #kurs h1, #info h1, #kontakt h1 {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2.0em;
     font-weight: 600;
     margin: 15vh 0 5vh;
     text-transform: uppercase;
@@ -298,13 +291,11 @@ section {
     font-size: 1.5em;
     font-weight: 600;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 29, 0.9);
-    color: rgb(255, 255, 255);
+	color: rgb(0, 0, 29);
     padding: 5px 15px;
     margin: 15px 5px 10px;
-    -webkit-transform: skew(-15deg);
-    -moz-transform: skew(-15deg);
-    -o-transform: skew(-15deg);
+		text-shadow: 1px 1px 1px rgba(0, 0, 29, 0.2),
+		2px 3px 4px rgba(0, 0, 29, 0.1);
 
 }
 .list-area p {
@@ -325,16 +316,31 @@ section {
 #kurs img {
     padding: 10px;
 }
+
+.carousel-item {
+	height: 75vh;
+}
 .carousel-caption{
 	background-color: rgba(255, 255, 255, 0.67);
 	color: black;
 	margin:0;
 	padding:2vh;
-	bottom: 7vh;
+	bottom: 10vh;
+	font-weight: 600;
 }
-.carousel-item {
-	height: 70vh;
+.carousel-caption h1{
+	font-weight: 900;
+	color: rgb(0, 0, 29);
 }
+
+.carousel-indicators li{
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	margin: 0 10px;
+}
+
+
 #info {
     display: grid;
     text-align: justify;
@@ -350,16 +356,14 @@ section {
 }
 
 #info h2 {
-    font-size: 1.5em;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 29, 0.9);
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    margin: 15px 5px 10px;
-    -webkit-transform: skew(-15deg);
-    -moz-transform: skew(-15deg);
-    -o-transform: skew(-15deg);
+	font-size: 1.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: rgb(0, 0, 29);
+	padding: 5px 15px;
+	margin: 15px 5px 10px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 29, 0.2),
+		2px 3px 4px rgba(0, 0, 29, 0.1);
 }
 
 .info-area p {
@@ -396,8 +400,6 @@ iframe {
     height: 70vh;
 }
 #mapa{
-	border: 3px solid rgb(0, 0, 29);
-	background-color: rgb(0, 0, 29);
 	padding: 3%;
 }
 
@@ -441,6 +443,11 @@ adress p, span {
     .nav-container {
         display: none;
     }
+	.nav-logo img {
+		display:flex;
+		width: 70px;
+		margin: 5px;
+	}
 
     nav ul {
         display: flex !important;
@@ -462,28 +469,27 @@ adress p, span {
         color: rgb(255, 216, 0);
     }
 
-    .banner-logo img {
-        visibility: visible;
-    }
+    
 
     .banner-text {
-        width: 40vw;
-        bottom: 15vh;
+        width: 55vw;
+        bottom: 10vh;
     }
 
     .banner-text h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     .banner-text h2 {
-        font-size: 1.5em;
-        line-height: 1.8em;
+        font-size: 1.2em;
+        line-height: 1.5em;
     }
 
 
-    #about h1, #kurs h1, #info h1, #kontakt h1 {
-        font-size: 2.4em;
-    }
+	#about h1, #kurs h1, #info h1, #kontakt h1 {
+		font-size: 2.2em;
+		font-weight: 900;
+	}
 
     #about-cards {
         display: grid;
@@ -611,6 +617,187 @@ adress p, span {
     adress a {
         font-size: 1.1em;
     }
+	#facebook_slider_widget{
+		visibility: visible;
+	}
+}
+@media screen and (min-width: 760px) {
+	.nav-container {
+		display: none;
+	}
+	.nav-logo img {
+		visibility: visible;
+		width: 90px;
+	}
+
+	nav ul {
+		display: flex !important;
+		flex-wrap: wrap;
+		background-color: rgba(0, 0, 29, 0.85);
+		justify-content: space-around;
+	}
+
+	nav ul a {
+		background: transparent;
+		padding: 7px;
+		font-weight: 600;
+		color: white;
+		font-size: 1.5em;
+	}
+
+	nav ul a:hover {
+		background: transparent;
+		padding: 5px;
+		color: rgb(255, 216, 0);
+	}
+
+
+
+	.banner-text {
+		width: 45vw;
+		bottom: 10vh;
+	}
+
+	.banner-text h1 {
+		font-size: 3em;
+	}
+
+	.banner-text h2 {
+		font-size: 1.5em;
+		line-height: 1.8em;
+	}
+
+
+	#about h1, #kurs h1, #info h1, #kontakt h1 {
+		font-size: 2.4em;
+	}
+
+	#about-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0.5em;
+		margin: 0;
+	}
+
+	.about-card {
+		height: 45vh;
+		width: 100%;
+		margin: 0;
+
+	}
+
+	.icon {
+		font-size: 6em;
+		margin: 5%;
+		color: rgb(255, 214, 10);
+	}
+
+	.front-text {
+		padding: 10%;
+		align-self: center;
+	}
+
+	.front-text h3 {
+		font-size: 2em;
+	}
+
+	.back-text {
+		padding: 12%;
+		align-self: center;
+	}
+
+	.back-text h3 {
+		font-size: 2.4em;
+		margin: 5%;
+	}
+
+	.back-text p {
+		font-size: 1.3em;
+	}
+
+	#kurs {
+		padding: 5px;
+	}
+	#kurs h2 {
+		padding: 5px 70px;
+		margin: 20px 0;
+	}
+	.kurs-text p {
+		padding: 0 70px;
+	}
+
+	.list-area p{
+		padding: 0 70px;
+	}
+	.list-kurs {
+		padding: 5px 15px 0 90px;
+	}
+	.list-kurs p{
+		padding: 2px 0 0;
+	}
+	#kurs p, #kurs h4 {
+		font-size: 1.1em;
+	}
+
+
+	#kurs img {
+		float: right;
+		padding: 0;
+		max-width: 30vw;
+		height: auto;
+		margin: 15px 15px 0;
+	}
+
+	.info-area img {
+		padding: 0 3%;
+		float: left;
+		border-radius: 50%;
+		max-width: 30vw;
+		height: auto;
+	}
+
+	#info, #info h1 {
+		padding: 5px;
+	}
+	#info h2 {
+		padding: 5px 70px;
+		margin: 20px 0;
+	}
+	#info p{
+		padding: 0 70px;
+	}
+	#info p, #info h4 {
+		font-size: 1.1em;
+	}
+	.list-info {
+		padding: 5px 15px 0 20px;
+		margin-left: 30vw;
+	}
+	.list-info p{
+		padding: 2px 0 0;
+	}
+	.kontakt-area {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	iframe {
+		width: 50vW;
+		padding: 5%;
+	}
+
+	adress h2 {
+		font-size: 1.7em;
+	}
+
+	adress p, span {
+		font-size: 1.3em;
+		line-height: 2em;
+	}
+
+	adress a {
+		font-size: 1.1em;
+	}
 	#facebook_slider_widget{
 		visibility: visible;
 	}
