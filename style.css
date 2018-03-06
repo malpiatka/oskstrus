@@ -188,7 +188,7 @@ section {
     font-weight: 600;
     margin: 15vh 0 5vh;
     text-transform: uppercase;
-    color: rgba(2, 2, 16);
+    color: rgb(2, 2, 16);
     text-shadow: 1px 1px 1px rgba(0, 0, 29, 0.6),
     2px 3px 4px rgba(0, 0, 29, 0.4);
 }
@@ -321,12 +321,7 @@ section {
 .list-kurs li p{
 	padding: 0;
 }
-.lk-footer{
-	font font-weight: 700;
-	color: rgb(0, 12, 159);
-	padding: 5px 15px;
-	
-}
+
 #kurs img {
     padding: 10px;
 }
@@ -350,8 +345,8 @@ section {
     padding: 10px;
     float: left;
     border-radius: 50%;
-    max-width: 40vw;
-    max-height: auto;
+    width: 40vw;
+    height: auto;
 }
 
 #info h2 {
@@ -380,6 +375,12 @@ section {
 .list-info li p{
 	padding: 0;
 }
+.li-footer{
+    font-weight: 600;
+    color: rgb(0, 12, 159);
+    padding: 5px 15px;
+
+}
 
 
 #kontakt {
@@ -395,8 +396,8 @@ iframe {
     height: 70vh;
 }
 #mapa{
-	border: 3px solid rgba(0, 0, 29);
-	background-color: rgba(0, 0, 29);
+	border: 3px solid rgb(0, 0, 29);
+	background-color: rgb(0, 0, 29);
 	padding: 3%;
 }
 
@@ -412,7 +413,7 @@ adress h2 {
     font-size: 1.5em;
     font-weight: 600;
     text-transform: uppercase;
-    color: rgba(0, 0, 29);
+    color: rgb(0, 0, 29);
     text-shadow: 1px 1px 1px rgba(0, 0, 29, 0.2),
     2px 3px 4px rgba(0, 0, 29, 0.1);
 }
@@ -556,7 +557,7 @@ adress p, span {
 		 float: right;
         padding: 0;
         max-width: 30vw;
-        max-height: auto;
+        height: auto;
         margin: 15px 15px 0;
     }
 
@@ -565,7 +566,7 @@ adress p, span {
         float: left;
         border-radius: 50%;
         max-width: 30vw;
-        max-height: auto;
+        height: auto;
     }
 
     #info, #info h1 {
