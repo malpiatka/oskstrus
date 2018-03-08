@@ -5,8 +5,14 @@ $(document).ready(function () {
     })
 });
 
+
+$('.carousel').carousel({
+	interval: 2000
+})
+
+
 $(document).ready(function () {
-    $('a[href^="#"]').click(function () {
+	$('.smooth-scroll').click(function () {
         let hash = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(hash).offset().top
