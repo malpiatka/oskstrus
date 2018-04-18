@@ -23,7 +23,7 @@ nav {
     flex: 0 0 auto;
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
 }
 
 .logo {
@@ -863,4 +863,13 @@ adress p, span {
     #facebook_slider_widget {
         visibility: visible;
     }
+}
+.pj360{
+	display: flex;
+	width: 100%;
+	height: auto;
+	border: none;
+	justify-content: center;
+	
+	
 }
