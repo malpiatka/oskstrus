@@ -7,12 +7,12 @@ $(document).ready(function () {
 
 
 $('.carousel').carousel({
-	interval: 3000
+    interval: 3000
 })
 
 
 $(document).ready(function () {
-	$('.smooth-scroll').click(function () {
+    $('.smooth-scroll').click(function () {
         let hash = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(hash).offset().top
